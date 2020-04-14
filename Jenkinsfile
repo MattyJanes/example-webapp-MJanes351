@@ -103,7 +103,7 @@ pipeline {
                     """
                 }
             }
-        }
+        }*/
 
  
         stage('Deploy to Production') {
@@ -112,12 +112,12 @@ pipeline {
             }
             steps {
                 script {
-                    PRODUCTION_ALB_LISTENER_ARN="arn:aws:elasticloadbalancing:us-east-1:089778365617:listener/app/production-website/a0459c11ab5707ca/5d21528a13519da6"
+                    PRODUCTION_ALB_LISTENER_ARN="arn:aws:elasticloadbalancing:us-west-2:380968173119:listener/app/production-website/27a89aa668bbdeca/7be5d1b35909d3d3"
                     sh """
                     ./run-stack.sh example-webapp-production ${PRODUCTION_ALB_LISTENER_ARN}
                     """
                 }
             }
-        }*/
+        }
     }
 }
