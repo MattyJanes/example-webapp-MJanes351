@@ -61,7 +61,7 @@ pipeline {
             }
         }
 
-        /*stage('Deploy to Production fixed server') {
+        stage('Deploy to Production fixed server') {
             when {
                 branch 'release'
             }
@@ -70,14 +70,14 @@ pipeline {
                 script {
                     productionImage.push("deploy")
                     sh """
-                       aws ec2 reboot-instances --region us-west-2 --instance-ids i-07ea1de13c8240807
+                       aws ec2 reboot-instances --region us-west-2 --instance-ids i-0a0bdbb46c8803e83
                     """
                 }
             }
         }
 
 
-        stage('Integration Tests') {
+        /*stage('Integration Tests') {
             when {
                 branch 'master'
             }
