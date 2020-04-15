@@ -61,7 +61,7 @@ pipeline {
             }
         }
 
-        stage('Deploy to Production fixed server') {
+        /*stage('Deploy to Production fixed server') {
             when {
                 branch 'release'
             }
