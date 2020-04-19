@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+#set -e
 set -x
 
 STACK_NAME=$1
