@@ -1,6 +1,7 @@
 #!/bin/bash
-#set -e
+set -e
 set -x
+echo "is this getting ran???"
 
 STACK_NAME=$1
 ALB_LISTENER_ARN=$2
